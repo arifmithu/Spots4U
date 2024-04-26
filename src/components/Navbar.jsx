@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../index.css";
+import { AuthContext } from "./AuthProvider";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import { onAuthStateChanged } from "firebase/auth";
+import auth from "../firebase/firebase.config";
 
 const Navbar = () => {
+  const { user, logOut, setUser, setLoading } = useContext(AuthContext);
+  const [showUserName, setShowUserName] = useState(false);
   const links = [
     <li>
       <NavLink to={"/"}>Home</NavLink>
@@ -17,6 +24,42 @@ const Navbar = () => {
       <NavLink to={"/mySpots"}>My List</NavLink>
     </li>,
   ];
+
+  // useEffect(() => {
+  //   const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     setUser(currentUser);
+  //     setLoading(false);
+  //   });
+  //   return () => {
+  //     unSubscribe();
+  //   };
+  // }, []);
+  console.log(user);
+  const handleLogOut = (e) => {
+    Swal.fire({
+      title: "Log out?",
+      text: "Are you sure to be logged out?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logOut()
+          .then(() => {
+            Swal.fire({
+              title: "Log out!",
+              text: "You are successfully logged out",
+              icon: "success",
+            });
+          })
+          .catch((error) => {
+            Swal.fire("Something went wrong !");
+          });
+      }
+    });
+  };
   return (
     <div className="px-5 lg:px-[80px] shadow-lg">
       <div className="navbar bg-base-100">
@@ -61,14 +104,34 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end gap-2">
-          <NavLink to={"/logIn"} className="btn">
-            Log In
-          </NavLink>
-          <NavLink to={"/register"} className="btn">
-            Register
-          </NavLink>
-        </div>
+        {user ? (
+          <div className="navbar-end gap-2 relative">
+            <div
+              onMouseEnter={() => setShowUserName(true)}
+              onMouseLeave={() => setShowUserName(false)}
+              className="w-10 h-10 rounded-full overflow-hidden"
+            >
+              <img src={user.photoURL} alt="" />
+            </div>
+            {showUserName ? (
+              <p className="absolute top-12">{user.displayName}</p>
+            ) : (
+              ""
+            )}
+            <button onClick={handleLogOut} className="btn">
+              Log Out
+            </button>
+          </div>
+        ) : (
+          <div className="navbar-end gap-2">
+            <NavLink to={"/logIn"} className="btn">
+              Log In
+            </NavLink>
+            <NavLink to={"/register"} className="btn">
+              Register
+            </NavLink>
+          </div>
+        )}
       </div>
     </div>
   );

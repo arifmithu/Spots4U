@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./components/Root.jsx";
 import Banner from "./components/BannerSwiper/Banner.jsx";
 import AuthProvider from "./components/AuthProvider.jsx";
 import LogIn from "./components/LogIn.jsx";
+import Register from "./components/Register.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         path: "/logIn",
         element: <LogIn></LogIn>,
       },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
     ],
   },
 ]);
@@ -28,7 +33,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>
 );
