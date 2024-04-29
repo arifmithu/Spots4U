@@ -6,3 +6,16 @@
   margin-left: 80px;
   margin-right: 80px;
 } */
+
+.gradient {
+  background: -webkit-linear-gradient(45deg, #ff0000, #0000ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.table {
+  width: 100%;
+}
+.spotContainer {
+  margin: 0 80px;
+}

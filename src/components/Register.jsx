@@ -5,11 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "./AuthProvider";
 import { Helmet } from "react-helmet-async";
+import auth from "../firebase/firebase.config";
 
 const Register = () => {
   const [registerError, setRegisterError] = useState("");
   const [registerSuccess, setRegisterSuccess] = useState("");
-  const { user, createUser } = useContext(AuthContext);
+  const { user, createUser, setUser } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -33,6 +34,17 @@ const Register = () => {
     createUser(email, password)
       .then((userCredential) => {
         // const user = userCredential.user;
+
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: photoURL,
+        })
+          .then(() => {
+            console.log("profile upadated");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
         setRegisterSuccess("User created succesfully");
         toast("Registration succesful");
       })

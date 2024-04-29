@@ -11,16 +11,16 @@ const Navbar = () => {
   const { user, logOut, setUser, setLoading } = useContext(AuthContext);
   const [showUserName, setShowUserName] = useState(false);
   const links = [
-    <li>
+    <li key={"home"}>
       <NavLink to={"/"}>Home</NavLink>
     </li>,
-    <li>
+    <li key={"spot"}>
       <NavLink to={"/allSpots"}>All Tourists Spot</NavLink>
     </li>,
-    <li>
+    <li key={"addSpot"}>
       <NavLink to={"/addSpot"}>Add Tourists Spot</NavLink>
     </li>,
-    <li>
+    <li key={"myList"}>
       <NavLink to={"/mySpots"}>My List</NavLink>
     </li>,
   ];
@@ -34,7 +34,6 @@ const Navbar = () => {
   //     unSubscribe();
   //   };
   // }, []);
-  console.log(user);
   const handleLogOut = (e) => {
     Swal.fire({
       title: "Log out?",
@@ -43,7 +42,7 @@ const Navbar = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Yes, Log out!",
     }).then((result) => {
       if (result.isConfirmed) {
         logOut()
@@ -114,7 +113,7 @@ const Navbar = () => {
               <img src={user.photoURL} alt="" />
             </div>
             {showUserName ? (
-              <p className="absolute top-12">{user.displayName}</p>
+              <p className="absolute top-12 right-24">{user.displayName}</p>
             ) : (
               ""
             )}

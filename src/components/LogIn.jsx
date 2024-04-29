@@ -29,6 +29,7 @@ const LogIn = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -39,6 +40,7 @@ const LogIn = () => {
     signInWithPopup(auth, githubProvider)
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
