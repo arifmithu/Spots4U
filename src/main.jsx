@@ -16,6 +16,7 @@ import Details from "./components/Details.jsx";
 import MySpots from "./components/MySpots.jsx";
 import UpdateSpot from "./components/UpdateSpot.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
+import AllSpotsByCountry from "./components/AllSpotsByCountry.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,10 +28,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      {
-        path: "/",
-        element: <AllSpots></AllSpots>,
-      },
+      // {
+      //   path: "/",
+      //   element: <AllSpots></AllSpots>,
+      // },
       {
         path: "/logIn",
         element: <LogIn></LogIn>,
@@ -62,18 +63,24 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/spots/${params.id}`),
+          fetch(`https://spots4u-server.vercel.app/spots/${params.id}`),
         element: <UpdateSpot></UpdateSpot>,
       },
       {
         path: "/details/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/spots/${params.id}`),
+          fetch(`https://spots4u-server.vercel.app/spots/${params.id}`),
         element: (
           <PrivateRoute>
             <Details></Details>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/:country",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/spots/search/${params.country}`),
+        element: <AllSpotsByCountry></AllSpotsByCountry>,
       },
     ],
   },

@@ -4,6 +4,8 @@ import AllSpots from "./AllSpots";
 import TouristsSpotSection from "./TouristsSpotSection";
 import CountriesSection from "./CountriesSection";
 import { AuthContext } from "./AuthProvider";
+import TravelTips from "./TravelTips";
+import PhotoGallery from "./PhotoGallery";
 
 const Home = () => {
   const { loading } = useContext(AuthContext);
@@ -18,6 +20,8 @@ const Home = () => {
           <Banner></Banner>
           <TouristsSpotSection></TouristsSpotSection>
           <CountriesSection></CountriesSection>
+          <TravelTips></TravelTips>
+          <PhotoGallery></PhotoGallery>
         </>
       )}
     </div>

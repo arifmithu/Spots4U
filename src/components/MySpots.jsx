@@ -10,7 +10,7 @@ const MySpots = () => {
   console.log(user);
 
   useEffect(() => {
-    fetch("http://localhost:5000/spots")
+    fetch("https://spots4u-server.vercel.app/spots")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -30,7 +30,7 @@ const MySpots = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/spots/${id}`, {
+        fetch(`https://spots4u-server.vercel.app/spots/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -73,7 +73,7 @@ const MySpots = () => {
           <div className="">
             <table className="table table-xs">
               <thead>
-                <tr className="border">
+                <tr className="border text-xl">
                   <th></th>
                   <th>Spot Name</th>
                   <th>Country</th>
@@ -86,12 +86,12 @@ const MySpots = () => {
               <tbody>
                 {allSpots.map((spot, index) => (
                   <tr key={index} className="border">
-                    <th>{index + 1}</th>
-                    <td>{spot.spotName}</td>
-                    <td>{spot.country}</td>
-                    <td>{spot.location}</td>
-                    <td>{spot.cost}</td>
-                    <td>
+                    <th className="text-lg">{index + 1}</th>
+                    <td className="text-lg">{spot.spotName}</td>
+                    <td className="text-lg">{spot.country}</td>
+                    <td className="text-lg">{spot.location}</td>
+                    <td className="text-lg">{spot.cost}</td>
+                    <td className="text-lg">
                       <Link to={`/update/${spot._id}`}>
                         <button className="btn">Update</button>
                       </Link>

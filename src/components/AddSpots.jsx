@@ -32,8 +32,9 @@ const AddSpots = () => {
       userEmail,
       userName,
     };
+    const countryName = { country, image };
 
-    fetch("http://localhost:5000/spots", {
+    fetch("https://spots4u-server.vercel.app/spots", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -47,6 +48,18 @@ const AddSpots = () => {
           Swal.fire("Spot added successfully !");
           form.reset();
         }
+      });
+
+    fetch("https://spots4u-server.vercel.app/countries", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(countryName),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
       });
   };
   return (

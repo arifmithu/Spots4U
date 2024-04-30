@@ -5,15 +5,22 @@ import { AuthContext } from "./AuthProvider";
 const AllSpots = () => {
   const [allSpots, setAllSpots] = useState([]);
   const [showSpots, setShowSpots] = useState([]);
-  const { loading, setLoading } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/spots")
+    setLoading(true);
+    fetch("https://spots4u-server.vercel.app/spots")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
         setAllSpots(data);
         setShowSpots(data.slice(0, 6));
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error);
       });
   }, []);
 
@@ -50,6 +57,10 @@ const AllSpots = () => {
       {loading ? (
         <div className="h-lvh flex justify-center items-center">
           <span className="loading loading-dots loading-lg items-center"></span>{" "}
+        </div>
+      ) : error ? (
+        <div className="h-lvh flex justify-center items-center">
+          <span className=" items-center">{error}</span>{" "}
         </div>
       ) : (
         <>

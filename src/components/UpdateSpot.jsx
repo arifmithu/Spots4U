@@ -48,7 +48,7 @@ const UpdateSpot = () => {
       userName,
     };
 
-    fetch(`http://localhost:5000/spots/${_id}`, {
+    fetch(`https://spots4u-server.vercel.app/spots/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

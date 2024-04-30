@@ -29,7 +29,7 @@ const Details = () => {
         <span className="gradient">{country}</span>
       </div>
       <div className="mb-3 flex gap-2 items-center">
-        <div className="w-[17.8%] text-nowrap flex items-center justify-between border">
+        <div className="w-[17.8%] text-nowrap flex items-center justify-between">
           <span className="text-lg font-bold">Short Description</span>
           <span className="text-lg font-bold">:</span>
         </div>
