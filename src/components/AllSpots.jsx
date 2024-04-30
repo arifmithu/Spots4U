@@ -67,7 +67,8 @@ const AllSpots = () => {
           <div className="mx-5 lg:mx-[80px] mt-5 lg:mt-20">
             <div className="text-center">
               <div className=" text-4xl font-bold mb-3">
-                <span className="text-red-500">Tourists</span> Spots
+                <span className="text-red-500">Tourists</span>{" "}
+                <span className="text-orange-500">Spots</span>
               </div>
               <div className="text-center text-zinc-400 w-[60%] mx-auto">
                 <p>
@@ -81,12 +82,16 @@ const AllSpots = () => {
             </div>
             <div className="text-right">
               <div className="dropdown">
-                <div tabIndex={0} role="button" className="btn m-1">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn m-1 bg-orange-500"
+                >
                   Sort By Cost
                 </div>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                  className="dropdown-content z-[1] menu p-2 shadow bg-orange-300 rounded-box w-52"
                 >
                   <li>
                     <button onClick={handleAscendingSort}>Low to High</button>

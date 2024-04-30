@@ -59,8 +59,8 @@ const MySpots = () => {
         <div className=" mt-10 lg:mt-14 mx-5 lg:mx-[80px]">
           <div className="text-center mb-10">
             <div className=" text-4xl font-bold mb-3">
-              <span className="text-red-500">My</span>
-              <span className="text-blue-500"> Added</span> Spots
+              <span className="text-red-500">My Added</span>
+              <span className="text-orange-500"> Spots</span>
             </div>
             <div className="text-center text-zinc-400 w-[60%] mx-auto">
               <p>
@@ -70,7 +70,7 @@ const MySpots = () => {
               </p>
             </div>
           </div>
-          <div className="">
+          <div className="rounded-lg">
             <table className="table table-xs">
               <thead>
                 <tr className="border text-xl">
@@ -85,7 +85,7 @@ const MySpots = () => {
               </thead>
               <tbody>
                 {allSpots.map((spot, index) => (
-                  <tr key={index} className="border">
+                  <tr key={index} className="border text-zinc-400">
                     <th className="text-lg">{index + 1}</th>
                     <td className="text-lg">{spot.spotName}</td>
                     <td className="text-lg">{spot.country}</td>
