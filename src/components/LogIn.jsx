@@ -81,7 +81,7 @@ const LogIn = () => {
     <div className="min-h-screen hero bg-base-200">
       <div className="flex-col hero-content">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold text-red-500">Login now!</h1>
         </div>
         <div className="w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
           <form className="card-body" onSubmit={handleLogin}>
@@ -112,9 +112,13 @@ const LogIn = () => {
                 {showPassword ? (
                   <FaRegEyeSlash
                     onClick={() => setShowPassword(!showPassword)}
+                    className="text-red-500"
                   />
                 ) : (
-                  <FaRegEye onClick={() => setShowPassword(!showPassword)} />
+                  <FaRegEye
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="text-red-500"
+                  />
                 )}
               </span>
               {registerError && <p className="text-red-600">{registerError}</p>}
@@ -126,7 +130,7 @@ const LogIn = () => {
             </div>
             <input type="submit" value="Log In" className="btn btn-primary" />
           </form>
-          <p className="mx-auto mb-2">Log In with :</p>
+          <p className="mx-auto mb-2 text-green-500 font-bold">Log In with :</p>
           <div className="flex gap-3 mx-auto mb-4">
             <FcGoogle
               onClick={handleGoogleLogIn}
@@ -139,7 +143,7 @@ const LogIn = () => {
           </div>
 
           <p className="mx-auto mb-5">
-            New here ?{" "}
+            <span className="text-green-500">New here ?</span>{" "}
             <span className="text-blue-500 hover:text-green-500">
               <NavLink to={"/register"}>Register Now!</NavLink>
             </span>

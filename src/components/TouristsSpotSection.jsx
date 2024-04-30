@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SpotCard from "./SpotCard";
+import { Fade } from "react-awesome-reveal";
 
 const TouristsSpotSection = () => {
   const [allSpots, setAllSpots] = useState([]);
@@ -18,8 +19,10 @@ const TouristsSpotSection = () => {
   return (
     <div className="mx-5 lg:mx-[80px] mt-5 lg:mt-20">
       <div className="divider divider-accent text-4xl font-bold">
-        <span className="text-red-500">Tourists</span>{" "}
-        <span className="text-orange-500">Spots</span>
+        <Fade>
+          <span className="text-red-500">Tourists</span>{" "}
+          <span className="text-orange-500">Spots</span>
+        </Fade>
       </div>
       <div className="text-center text-zinc-400">
         <p>Check all the added tourists spots</p>

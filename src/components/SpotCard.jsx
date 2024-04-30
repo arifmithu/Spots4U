@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
+import { Fade } from "react-awesome-reveal";
 
 const SpotCard = ({ spot }) => {
   console.log(spot);
@@ -17,12 +19,17 @@ const SpotCard = ({ spot }) => {
   return (
     <div className="card card-side bg-base-100 shadow-xl">
       <div className="w-1/3 border rounded-tl-lg rounded-bl-lg overflow-hidden">
-        <img src={image} alt="spot image" className=" h-full object-cover" />
+        <a data-tooltip-id="my-tooltip" data-tooltip-content={spotName}>
+          <img src={image} alt="spot image" className=" h-full object-cover" />
+        </a>
       </div>
       <div className="card-body w-2/3 bg-red-200">
         <div className="flex items-center gap-3">
           <span className="card-title">{spotName}</span>
+
           <span className="bg-slate-300 p-1 rounded-lg">{country}</span>
+
+          <Tooltip id="my-tooltip" />
         </div>
         <p className="font-bold">
           {" "}

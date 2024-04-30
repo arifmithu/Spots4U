@@ -56,7 +56,7 @@ const AllSpots = () => {
     <div>
       {loading ? (
         <div className="h-lvh flex justify-center items-center">
-          <span className="loading loading-dots loading-lg items-center"></span>{" "}
+          <span className="loading loading-dots loading-lg items-center text-red-500"></span>{" "}
         </div>
       ) : error ? (
         <div className="h-lvh flex justify-center items-center">

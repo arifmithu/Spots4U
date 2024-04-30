@@ -1,11 +1,14 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 const TravelTips = () => {
   return (
     <div className="mx-5 lg:mx-[80px] mt-5 lg:mt-20">
       <div className="divider divider-accent text-4xl font-bold">
-        <span className="text-red-500">Travel Tips</span>{" "}
-        <span className="text-orange-500">& Guides</span>
+        <Fade>
+          <span className="text-red-500">Travel Tips</span>{" "}
+          <span className="text-orange-500">& Guides</span>
+        </Fade>
       </div>
       <div className="text-center text-zinc-400">
         <p>Know all the answers of your questions in mind to travel a spot.</p>
