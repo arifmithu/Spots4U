@@ -11,6 +11,12 @@ const Navbar = () => {
   const { user, logOut, setUser, setLoading } = useContext(AuthContext);
   const [showUserName, setShowUserName] = useState(false);
   const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
   const links = [
     <li key={"home"}>
       <NavLink to={"/"}>Home</NavLink>
