@@ -80,7 +80,7 @@ const AddSpots = () => {
               type="text"
               name="spotName"
               placeholder="Enter a new spot"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col mb-5 w-1/2">
@@ -91,7 +91,7 @@ const AddSpots = () => {
               type="text"
               name="country"
               placeholder="Enter country name"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -105,7 +105,7 @@ const AddSpots = () => {
               type="text"
               name="location"
               placeholder="Enter location"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col mb-5 w-1/2">
@@ -116,7 +116,7 @@ const AddSpots = () => {
               type="text"
               name="description"
               placeholder="Enter short description"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -130,7 +130,7 @@ const AddSpots = () => {
               type="text"
               name="cost"
               placeholder="Enter average cost"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col w-1/2 mb-5">
@@ -141,7 +141,7 @@ const AddSpots = () => {
               type="text"
               name="seasonality"
               placeholder="Enter best season to visit"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -155,7 +155,7 @@ const AddSpots = () => {
               type="text"
               name="time"
               placeholder="Required time for a visit"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col w-1/2 mb-5">
@@ -166,7 +166,7 @@ const AddSpots = () => {
               type="text"
               name="visitor"
               placeholder="How much people visit per year"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -178,7 +178,7 @@ const AddSpots = () => {
             type="text"
             name="image"
             placeholder="Enter image URL"
-            className="w-full p-2 text-xl border rounded-lg ml-1"
+            className="w-full p-2 text-xl border rounded-lg ml-1 bg-white"
           />
         </div>
         <input

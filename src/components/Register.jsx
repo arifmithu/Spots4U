@@ -60,11 +60,13 @@ const Register = () => {
       <Helmet>
         <title>Spots4U | Register</title>
       </Helmet>
-      <h1 className="mb-8 text-3xl font-bold text-center">Please Register</h1>
+      <h1 className="mb-8 text-3xl font-bold text-center text-red-500">
+        Please <span className="text-orange-500">Register</span>
+      </h1>
       <div className="w-2/3 mx-auto">
         <form onSubmit={handleRegister}>
           <input
-            className="w-full px-4 py-2 mb-3 border rounded"
+            className="w-full px-4 py-2 mb-3 border rounded bg-white"
             type="text"
             name="name"
             required
@@ -72,14 +74,14 @@ const Register = () => {
           />{" "}
           <br />
           <input
-            className="w-full px-4 py-2 mb-3 border rounded"
+            className="w-full px-4 py-2 mb-3 border rounded bg-white"
             type="text"
             name="photoURL"
             placeholder="Your photoURL"
           />{" "}
           <br />
           <input
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-2 border rounded bg-white"
             type="email"
             name="email"
             required
@@ -87,7 +89,7 @@ const Register = () => {
           />{" "}
           <br />
           <input
-            className="w-full px-4 py-2 mt-3 border rounded"
+            className="w-full px-4 py-2 mt-3 border rounded bg-white"
             type="password"
             name="password"
             required
@@ -106,7 +108,7 @@ const Register = () => {
           )}
           <div className="w-full text-lg font-bold text-center">
             <p>
-              Already have an account ?{" "}
+              <span className="text-orange-500">Already have an account ?</span>{" "}
               <NavLink
                 to={"/login"}
                 className="ml-4 font-bold text-blue-500 hover:bg-gray-300 hover:rounded-lg hover:px-4 hover:py-2"

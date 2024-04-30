@@ -18,7 +18,7 @@ const Details = () => {
     visitor,
   } = spot;
   return (
-    <div className="mx-5 lg:mx-[80px] shadow-xl p-5">
+    <div className="mx-5 lg:mx-[80px] shadow-xl p-5 bg-orange-200 mt-10 rounded-lg">
       <div class="divider divider-success text-4xl font-bold ">
         <span className="gradient">{spotName}</span>
       </div>

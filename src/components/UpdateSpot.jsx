@@ -80,7 +80,7 @@ const UpdateSpot = () => {
               name="spotName"
               defaultValue={spotName}
               placeholder="Enter a new spot"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col mb-5 w-1/2">
@@ -92,7 +92,7 @@ const UpdateSpot = () => {
               name="country"
               defaultValue={country}
               placeholder="Enter country name"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -107,7 +107,7 @@ const UpdateSpot = () => {
               name="location"
               defaultValue={location}
               placeholder="Enter location"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col mb-5 w-1/2">
@@ -119,7 +119,7 @@ const UpdateSpot = () => {
               name="description"
               defaultValue={description}
               placeholder="Enter short description"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -134,7 +134,7 @@ const UpdateSpot = () => {
               name="cost"
               defaultValue={cost}
               placeholder="Enter average cost"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col w-1/2 mb-5">
@@ -146,7 +146,7 @@ const UpdateSpot = () => {
               name="seasonality"
               defaultValue={seasonality}
               placeholder="Enter best season to visit"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -161,7 +161,7 @@ const UpdateSpot = () => {
               name="time"
               defaultValue={time}
               placeholder="Required time for a visit"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
           <div className="flex flex-col w-1/2 mb-5">
@@ -173,7 +173,7 @@ const UpdateSpot = () => {
               name="visitor"
               defaultValue={visitor}
               placeholder="How much people visit per year"
-              className="flex-1 p-2 text-xl border rounded-lg ml-1"
+              className="flex-1 p-2 text-xl border rounded-lg ml-1 bg-white"
             />
           </div>
         </div>
@@ -186,7 +186,7 @@ const UpdateSpot = () => {
             name="image"
             defaultValue={image}
             placeholder="Enter image URL"
-            className="w-full p-2 text-xl border rounded-lg ml-1"
+            className="w-full p-2 text-xl border rounded-lg ml-1 bg-white"
           />
         </div>
         <input
