@@ -19,7 +19,7 @@ const SpotCard = ({ spot }) => {
       <div className="w-1/3 border rounded-tl-lg rounded-bl-lg overflow-hidden">
         <img src={image} alt="spot image" className=" h-full object-cover" />
       </div>
-      <div className="card-body w-2/3">
+      <div className="card-body w-2/3 bg-slate-400">
         <div className="flex items-center gap-3">
           <span className="card-title">{spotName}</span>
           <span className="bg-slate-300 p-1 rounded-lg">{country}</span>

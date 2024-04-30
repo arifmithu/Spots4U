@@ -31,16 +31,6 @@ const Navbar = () => {
       <NavLink to={"/mySpots"}>My List</NavLink>
     </li>,
   ];
-
-  // useEffect(() => {
-  //   const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //     setUser(currentUser);
-  //     setLoading(false);
-  //   });
-  //   return () => {
-  //     unSubscribe();
-  //   };
-  // }, []);
   const handleLogOut = (e) => {
     Swal.fire({
       title: "Log out?",
@@ -75,8 +65,16 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="px-5 lg:px-[80px] shadow-lg">
-      <div className="navbar bg-base-100">
+    <div
+      className={`px-5 lg:px-[80px] shadow-lg ${
+        theme == "synthwave" ? "bg-purple-600" : ""
+      }`}
+    >
+      <div
+        className={`navbar bg-base-100 ${
+          theme == "synthwave" ? "bg-purple-600" : ""
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -103,7 +101,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center">
-            <div className="w-8 h-8 rounded-full border object-contain">
+            <div className="w-8 h-8 rounded-full border object-contain overflow-hidden">
               <img
                 src="https://i.ibb.co/kSMycY6/Spots4u.png"
                 alt=""
@@ -148,8 +146,8 @@ const Navbar = () => {
         )}
         <label className="cursor-pointer ml-2 grid place-items-center">
           <input
+            onChange={handleThemeToggole}
             type="checkbox"
-            value="synthwave"
             className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
           />
           <svg
