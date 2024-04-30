@@ -79,7 +79,9 @@ const router = createBrowserRouter([
       {
         path: "/:country",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/spots/search/${params.country}`),
+          fetch(
+            `https://spots4u-server.vercel.app/spots/search/${params.country}`
+          ),
         element: <AllSpotsByCountry></AllSpotsByCountry>,
       },
     ],

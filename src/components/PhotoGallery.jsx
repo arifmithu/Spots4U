@@ -5,7 +5,7 @@ const PhotoGallery = () => {
   const [allSpots, setAllSpots] = useState([]);
   const [showSpots, setShowSpots] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/spots")
+    fetch("https://spots4u-server.vercel.app/spots")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
