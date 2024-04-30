@@ -4,7 +4,8 @@ const TravelTips = () => {
   return (
     <div className="mx-5 lg:mx-[80px] mt-5 lg:mt-20">
       <div className="divider divider-accent text-4xl font-bold">
-        <span className="text-red-500">Travel Tips</span> & Guides
+        <span className="text-red-500">Travel Tips</span>{" "}
+        <span className="text-orange-500">& Guides</span>
       </div>
       <div className="text-center text-zinc-400">
         <p>Know all the answers of your questions in mind to travel a spot.</p>
@@ -12,10 +13,10 @@ const TravelTips = () => {
       <div className="mt-8">
         <div className="collapse mb-4 collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" defaultChecked />
-          <div className="collapse-title text-xl font-medium">
+          <div className="collapse-title text-xl font-medium bg-violet-300">
             What should we know to start for a spot?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content bg-violet-300">
             <p>
               Market Research: Conduct thorough market research to understand
               the demand for your destination. Analyze visitor demographics,
@@ -47,10 +48,10 @@ const TravelTips = () => {
         </div>
         <div className="collapse mb-4 collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title text-xl font-medium">
+          <div className="collapse-title text-xl font-medium bg-violet-300">
             What types of equipments should we take with us ?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content bg-violet-300">
             <p>
               When embarking on a journey to a tourist spot, it's crucial to
               equip yourself with essential items to ensure a smooth and
@@ -72,10 +73,10 @@ const TravelTips = () => {
         </div>
         <div className="collapse mb-4 collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title text-xl font-medium">
+          <div className="collapse-title text-xl font-medium bg-violet-300">
             How to experience a budget travel ?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content bg-violet-300">
             <p>
               Guides geared towards travelers seeking to explore destinations on
               a budget. They provide tips for finding affordable accommodations,
@@ -87,10 +88,10 @@ const TravelTips = () => {
         </div>
         <div className="collapse mb-4 collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title text-xl font-medium">
+          <div className="collapse-title text-xl font-medium bg-violet-300">
             How to go for a family trip ?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content bg-violet-300">
             <p>
               Family travel presents a wonderful opportunity for bonding,
               exploration, and creating lifelong memories together. To ensure a
@@ -113,10 +114,10 @@ const TravelTips = () => {
         </div>
         <div className="collapse collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title text-xl font-medium">
+          <div className="collapse-title text-xl font-medium bg-violet-300">
             How to get the best deals for a tour ?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content bg-violet-300">
             <p>
               To secure the best deals for a tour, it's essential to employ a
               strategic approach that combines thorough research, flexibility,

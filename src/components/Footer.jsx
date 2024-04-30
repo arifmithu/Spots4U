@@ -19,7 +19,7 @@ const Footer = () => {
           <p>
             All rights reserved by Spots4U
             <br />
-            Providing reliable tech since 1992
+            Providing reliable info since 2024
           </p>
         </aside>
         <nav>

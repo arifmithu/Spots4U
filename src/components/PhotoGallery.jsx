@@ -24,8 +24,9 @@ const PhotoGallery = () => {
   return (
     <div className="mx-5 lg:mx-[80px] mt-10 lg:mt-20">
       <div className="text-center">
-        <div className=" text-4xl font-bold mb-3">
-          <span className="text-red-500"> Photo </span>Gallery
+        <div className="divider divider-accent text-4xl font-bold">
+          <span className="text-red-500"> Photo </span>
+          <span className="text-orange-500">Gallery</span>
         </div>
         <div className="text-center text-zinc-400 w-[60%] mx-auto">
           <p>
